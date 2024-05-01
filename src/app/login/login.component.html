@@ -1,0 +1,19 @@
+<div class="position-absolute top-50 start-50 translate-middle">
+    <form method="post" id="login-field" class="card p-2 m-2 d-flex flex-column">
+      <h4 class="card-title">Login</h4>
+      <mat-form-field class="email">
+        <input type="email" matInput [formControl]="emailFormControl" placeholder="Email" name="email" required>
+      </mat-form-field>
+      <span>{{emailFormControl.value}}</span>
+      <mat-form-field class="password">
+        <input type="password" matInput [formControl]="passwordFormControl" placeholder="Password" name="password" required>
+      </mat-form-field>
+      <span>{{passwordFormControl.value}}</span>
+      <mat-form-field class="confirmPassword">
+        <input type="password" matInput [formControl]="confirmPasswordFormControl" placeholder="Confirm Password" name="confirmPassword" required>
+      </mat-form-field>
+      <span>{{confirmPasswordFormControl.value}}</span>
+      <button mat-flat-button color="primary" type="submit">Submit</button>
+    </form>
+  </div>
+  
