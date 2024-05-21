@@ -30,7 +30,6 @@ export class LoginComponent {
     }
   };
   hidePassword(event: Event) {
-    event.stopPropagation();
     this.hide = !this.hide;
   }
 }

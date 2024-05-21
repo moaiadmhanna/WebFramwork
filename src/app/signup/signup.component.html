@@ -11,14 +11,14 @@
                     <mat-form-field>
                         <mat-label>Password</mat-label>
                         <input [type]="hidePassword ? 'password' : 'text'" matInput [formControl]="passwordFormControl" required showPasswordToggle>
-                        <button mat-icon-button matSuffix (click)="hidePasswordEvent($event)" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+                        <button type="button" mat-icon-button matSuffix (click)="hidePasswordEvent($event)" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
                             <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
                         </button>
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>Confirm Password</mat-label>
                         <input matInput [formControl]="confirmPasswordFormControl" [type]="hideConfirm ? 'password' : 'text'" required showPasswordToggle>
-                        <button mat-icon-button matSuffix (click)="hideConfirmEvent($event)" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hideConfirm">
+                        <button type="button" mat-icon-button matSuffix (click)="hideConfirmEvent($event)" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hideConfirm">
                             <mat-icon>{{ hideConfirm ? 'visibility_off' : 'visibility' }}</mat-icon>
                         </button>
                     </mat-form-field>

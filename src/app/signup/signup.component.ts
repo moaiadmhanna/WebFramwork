@@ -37,11 +37,9 @@ export class SignupComponent {
       }
   };
   hidePasswordEvent(event: Event) {
-    event.stopPropagation();
     this.hidePassword = !this.hidePassword;
   }
   hideConfirmEvent(event: Event) {
-    event.stopPropagation();
     this.hideConfirm = !this.hideConfirm;
   }
 }

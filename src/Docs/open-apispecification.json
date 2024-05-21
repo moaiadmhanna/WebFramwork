@@ -1,0 +1,95 @@
+{
+    "openapi":"3.0.1",
+    "info":{
+        "title":"Highscorelsten",
+        "version":"1.0.0",
+        "description":"Users will be able to register for this application, log in, and view the high score list for a fictional game. Only logged-in users can see the high scores."
+    },
+    "paths":{
+        "/signup":{
+            "post":{
+                "requestBody":{
+                    "description":"User will be able to register in the Website",
+                    "schema":{
+                        "$ref" : "#/components/schemas/signup"
+                    }
+                },
+                "responses":{
+                    "200":{
+                        "description":"Return a 200 status to indicate that the data was received successfully"
+                    },
+                    "400":{
+                        "description":"Return a 400 status to indicate that the data was not received successfully"
+                    }
+                }  
+            }
+        },
+        "/login":{
+            "post":{
+                "requestBody":{
+                    "description":"User will be able to login in the Website",
+                    "schema":{
+                        "$ref" : "#/components/schemas/login"
+                    }
+                },
+                "responses":{
+                    "200":{
+                        "description":"Return a 200 status to indicate that the Connection was established successfully"
+                    },
+                    "400":{
+                        "description":"Return a 400 status to indicate that the Connection ist not established successfully"
+                    }
+                }
+            }
+        }
+    },
+    "components":{
+        "schemas":{
+            "signup":{
+                "required":[
+                    "Email",
+                    "Password"
+                ],
+                "properties":{
+                    "Email":{
+                        "type":"string"
+                    },
+                    "Password":{
+                        "type":"string"
+                    },
+                    "confirmPassword":{
+                        "type":"string"
+                    },
+                    "Company":{
+                        "type":"string"
+                    },
+                    "Address":{
+                        "Street":{
+                            "type":"string"
+                        },
+                        "City":{
+                            "type":"string"
+                        },
+                        "Postcode":{
+                            "type":"string"
+                        }
+                    }
+                }
+            },
+            "login":{
+                "required":[
+                    "Email",
+                    "Password"
+                ],
+                "properties":{
+                    "Email":{
+                        "type":"string"
+                    },
+                    "Password":{
+                        "type":"string"
+                    }
+                }
+            }
+        }
+    }
+}
