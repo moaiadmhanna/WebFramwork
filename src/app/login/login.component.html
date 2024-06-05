@@ -12,6 +12,9 @@
         <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
       </button>
     </mat-form-field>
-    <button mat-flat-button color="primary" (click)="onSubmit()" type="submit">Login</button>
+    <div class="d-flex justify-content-between">
+      <a mat-raised-button color="primary" href="/signup">Signup</a>
+      <button mat-flat-button color="primary" (click)="onSubmit()" type="submit">Login</button>
+    </div>
   </form>
 </div>

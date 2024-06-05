@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>New Score</h2>
+<mat-dialog-content>
+  <form (ngSubmit)="onSubmit()">
+    <mat-form-field class="username m-2">
+      <mat-label>Username</mat-label>
+      <input type="text" matInput [formControl]="usernameFormControl" name="username" required>
+    </mat-form-field>
+    <mat-form-field class="score m-2">
+      <mat-label>Score</mat-label>
+      <input type="number" matInput [formControl]="scoreFormControl" name="score" required>
+    </mat-form-field>
+    <button mat-flat-button color="warn" id="submitButton" type="submit">Submit</button>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

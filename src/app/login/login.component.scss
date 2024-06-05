@@ -4,4 +4,12 @@
 #login-field > mat-form-field{
     max-width: 40vw;
 } 
+.custom-snackbar-success {
+    background-color: #4caf50 !important;
+    color: #ffffff !important; 
+  }
   
+  .custom-snackbar-error {
+    background-color: #f44336 !important;
+    color: #ffffff !important;
+  }

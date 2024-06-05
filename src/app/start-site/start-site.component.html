@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white fs-4 d-flex" href="">
+            <img src="../../assets/icons8-board-64.png" alt="Logo" width="34" height="34" class="d-inline-block align-text-top">
+            <p class="m-0">ighscore App</p>
+        </a>
+        <div class="d-flex justify-content-between">
+            <button mat-flat-button type="button" class="m-2" (click)="openDialog()">Add Score</button>
+            <button mat-flat-button type="button" class="m-2" (click) = "toggleScores()">{{!showScores ? 'Show Highscores' : 'Hide Highscores'}}</button>
+            <button mat-flat-button type="button" class="m-2" (click) = "logout()">Logout</button>     
+        </div>
+    </div>
+</nav>
+<div *ngIf="showScores">
+    <table class="table">
+        <thead>
+          <tr class="table-danger">
+            <th scope="col">#</th>
+            <th scope="col">Username</th>
+            <th scope="col">Score</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let score of scores;let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{ score.username }}</td>
+            <td>{{ score.score }}</td>
+        </tbody>
+      </table>
+  </div>
