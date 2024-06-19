@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:web_projekt": "node dist/web_projekt/server/server.mjs"
+    "server": "node Server/index.js"
   },
   "private": true,
   "dependencies": {
